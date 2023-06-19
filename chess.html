@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div id="chess">
+      <div class="qizi">车</div>
+      <div class="qizi">马</div>
+      <div class="qizi">相</div>
+      <div class="qizi">仕</div>
+      <div class="qizi">帅</div>
+      <div class="qizi">仕</div>
+      <div class="qizi">相</div>
+      <div class="qizi">马</div>
+      <div class="qizi">车</div>
+
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+
+      <div class="qizi"></div>
+      <div class="qizi">炮</div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi">炮</div>
+      <div class="qizi"></div>
+
+      <div class="qizi">兵</div>
+      <div class="qizi"></div>
+      <div class="qizi">兵</div>
+      <div class="qizi"></div>
+      <div class="qizi">兵</div>
+      <div class="qizi"></div>
+      <div class="qizi">兵</div>
+      <div class="qizi"></div>
+      <div class="qizi">兵</div>
+
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+
+      <div class="qizi">卒</div>
+      <div class="qizi"></div>
+      <div class="qizi">卒</div>
+      <div class="qizi"></div>
+      <div class="qizi">卒</div>
+      <div class="qizi"></div>
+      <div class="qizi">卒</div>
+      <div class="qizi"></div>
+      <div class="qizi">卒</div>
+
+      <div class="qizi"></div>
+      <div class="qizi">炮</div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi">炮</div>
+      <div class="qizi"></div>
+
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+      <div class="qizi"></div>
+
+      <div class="qizi">车</div>
+      <div class="qizi">马</div>
+      <div class="qizi">象</div>
+      <div class="qizi">士</div>
+      <div class="qizi">将</div>
+      <div class="qizi">士</div>
+      <div class="qizi">象</div>
+      <div class="qizi">马</div>
+      <div class="qizi">车</div>
+
+    </div>
+    <style>
+      #chess {
+        margin: 5% auto;
+        height: 508px;
+        width: 459px;
+        background-image: url('./棋盘.jpg');
+      }
+      .qizi {
+        width: 49px;
+        height: 49px;
+        float: left;
+        margin: 0 2px 2px 0;
+        /* background-color: aqua; */
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        line-height: 49px;
+        font-weight: bold;
+        font-size: 20px;
+        background-size: 100% auto;
+      }
+      .qizi:nth-child(1) {
+        width: 49px;
+        height: 49px;
+        float: left;
+        margin: 0 2px 2px 0;
+      }
+    </style>
+    <script>
+      const chess = document.querySelectorAll('#chess > div');
+      const red_list = [0,1,2,3,4,5,6,7,8,19,25,27,29,31,33,35];
+      const black_list = [54,56,58,60,62,64,70,81,82,83,84,85,86,87,88,89];
+      let i = 0;
+      chess.forEach(item => {
+        if(red_list.includes(i)) {
+          item.style.backgroundImage = `url('./qizimuban.png')`;
+          item.style.color = '#b70000';
+        }
+        if(black_list.includes(i)) {
+          item.style.backgroundImage = `url('./qizimuban.png')`;
+          item.style.color = 'black';
+        }
+        i++;
+      });
+    </script>
+  </body>
+</html>
